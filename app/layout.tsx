@@ -2,6 +2,8 @@ import React from 'react';
 import { Sun, Home, Calculator, Eye } from "lucide-react";
 import "./globals.css"; 
 
+const REPO = '/solar-pwa';
+
 function Navigation() {
   return (
     <nav className="flex items-center gap-2">
