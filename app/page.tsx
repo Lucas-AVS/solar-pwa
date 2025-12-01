@@ -1,65 +1,134 @@
-import Image from "next/image";
+import React from 'react';
+import { Sun, Leaf, Wallet, TrendingUp, AlertCircle, Eye, DollarSign } from "lucide-react";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <div className="w-full">
+      {/* Hero Section */}
+      <section className="relative overflow-hidden bg-gradient-to-br from-primary/10 via-background to-secondary/10">
+        <div className="container mx-auto px-4 py-20 md:py-32 max-w-6xl relative">
+          <div className="max-w-3xl mx-auto text-center space-y-8">
+            <div className="inline-flex items-center justify-center w-20 h-20 md:w-24 md:h-24 rounded-full bg-gradient-to-br from-primary to-secondary mb-6 shadow-lg">
+              <Sun className="w-12 h-12 md:w-14 md:h-14 text-white" strokeWidth={2.5} />
+            </div>
+
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-balance">
+              Save Money with{" "}
+              <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                Solar Energy
+              </span>
+            </h1>
+
+            <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto text-pretty leading-relaxed">
+              Discover how solar power can reduce your electricity bills and increase your property value while helping the planet.
+            </p>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+
+      {/* Did You Know Section */}
+      <section className="py-16 md:py-24 bg-card">
+        <div className="container mx-auto px-4 max-w-6xl">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Did You Know?</h2>
+            <p className="text-lg text-muted-foreground text-balance">
+              Solar energy offers incredible benefits for your home and wallet
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6 mb-8">
+            {/* Pros */}
+            <div className="bg-gradient-to-br from-primary/5 to-primary/10 rounded-2xl p-8 border border-primary/20 shadow-sm">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center">
+                  <Leaf className="w-6 h-6 text-primary-foreground" />
+                </div>
+                <h3 className="text-2xl font-bold text-primary">Sustainability</h3>
+              </div>
+              <p className="text-muted-foreground leading-relaxed">
+                Solar energy is renewable and clean, reducing your carbon footprint and helping combat climate change.
+              </p>
+            </div>
+
+            <div className="bg-gradient-to-br from-secondary/5 to-secondary/10 rounded-2xl p-8 border border-secondary/20 shadow-sm">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-12 h-12 rounded-full bg-secondary flex items-center justify-center">
+                  <Wallet className="w-6 h-6 text-secondary-foreground" />
+                </div>
+                <h3 className="text-2xl font-bold text-secondary-foreground">Economy</h3>
+              </div>
+              <p className="text-muted-foreground leading-relaxed">
+                Dramatically reduce your monthly electricity bills. Solar systems can pay for themselves within a few years.
+              </p>
+            </div>
+
+            <div className="bg-gradient-to-br from-primary/5 to-primary/10 rounded-2xl p-8 border border-primary/20 shadow-sm">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center">
+                  <TrendingUp className="w-6 h-6 text-primary-foreground" />
+                </div>
+                <h3 className="text-2xl font-bold text-primary">Property Valuation</h3>
+              </div>
+              <p className="text-muted-foreground leading-relaxed">
+                Homes with solar panels sell faster and at higher prices. It's an investment that increases your property value.
+              </p>
+            </div>
+
+            {/* Con */}
+            <div className="bg-gradient-to-br from-muted to-muted/50 rounded-2xl p-8 border border-input shadow-sm">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-12 h-12 rounded-full bg-muted-foreground/20 flex items-center justify-center">
+                  <AlertCircle className="w-6 h-6 text-foreground" />
+                </div>
+                <h3 className="text-2xl font-bold">Initial Cost</h3>
+              </div>
+              <p className="text-muted-foreground leading-relaxed">
+                The upfront investment can be significant, but financing options and government incentives make it more accessible.
+              </p>
+            </div>
+          </div>
         </div>
-      </main>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-16 md:py-24 bg-gradient-to-br from-background via-primary/5 to-secondary/5">
+        <div className="container mx-auto px-4 max-w-4xl">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-balance">Ready to Go Solar?</h2>
+            <div className="grid md:grid-cols-2 gap-6 mt-8">
+              <a
+                href="/demo"
+                className="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-primary to-primary/80 p-8 shadow-xl hover:scale-[1.02] transition-all"
+              >
+                <div className="relative">
+                  <div className="w-16 h-16 rounded-full bg-white/20 flex items-center justify-center mb-6">
+                    <Eye className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-2xl md:text-3xl font-bold text-white mb-3">See a Demo</h3>
+                  <div className="mt-6 flex items-center gap-2 text-white font-semibold">
+                    View Demo <TrendingUp className="w-5 h-5" />
+                  </div>
+                </div>
+              </a>
+
+              <a
+                href="/calculator"
+                className="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-secondary to-secondary/80 p-8 shadow-xl hover:scale-[1.02] transition-all"
+              >
+                <div className="relative">
+                  <div className="w-16 h-16 rounded-full bg-black/20 flex items-center justify-center mb-6">
+                    <DollarSign className="w-8 h-8 text-secondary-foreground" />
+                  </div>
+                  <h3 className="text-2xl md:text-3xl font-bold text-secondary-foreground mb-3">Calculate</h3>
+                  <div className="mt-6 flex items-center gap-2 text-secondary-foreground font-semibold">
+                    Start Calculating <TrendingUp className="w-5 h-5" />
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
