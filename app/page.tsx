@@ -1,6 +1,8 @@
 import React from 'react';
 import { Sun, Leaf, Wallet, TrendingUp, AlertCircle, Eye, DollarSign } from "lucide-react";
 
+const REPO = '/solar-pwa';
+
 export default function Home() {
   return (
     <div className="w-full">
@@ -97,7 +99,7 @@ export default function Home() {
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-balance">Ready to Go Solar?</h2>
             <div className="grid md:grid-cols-2 gap-6 mt-8">
               <a
-                href="/demo"
+                href={`${REPO}/demo`}
                 className="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-primary to-primary/80 p-8 shadow-xl hover:scale-[1.02] transition-all"
               >
                 <div className="relative">
@@ -112,7 +114,7 @@ export default function Home() {
               </a>
 
               <a
-                href="/calculator"
+                href={`${REPO}/calculator`}
                 className="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-secondary to-secondary/80 p-8 shadow-xl hover:scale-[1.02] transition-all"
               >
                 <div className="relative">

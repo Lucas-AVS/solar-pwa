@@ -1,41 +1,33 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google"; // Changed from Geist to Inter (Standard)
-import Link from "next/link";
+import React from 'react';
 import { Sun, Home, Calculator, Eye } from "lucide-react";
-import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
-
-export const metadata: Metadata = {
-  title: "Solar Energy Calculator",
-  description: "Calculate your solar energy savings",
-  manifest: "/manifest.json", // Reference strictly for PWA
-};
+// Helper to handle GitHub Pages path
+const REPO = '/solar-pwa';
 
 function Navigation() {
   return (
     <nav className="flex items-center gap-2">
-      <Link
-        href="/"
+      <a
+        href={`${REPO}/`}
         className="flex items-center gap-2 px-4 py-2 rounded-lg transition-colors text-muted-foreground hover:text-foreground hover:bg-muted"
       >
         <Home className="w-4 h-4" />
         <span className="hidden sm:inline">Home</span>
-      </Link>
-      <Link
-        href="/demo"
+      </a>
+      <a
+        href={`${REPO}/demo`}
         className="flex items-center gap-2 px-4 py-2 rounded-lg transition-colors text-muted-foreground hover:text-foreground hover:bg-muted"
       >
         <Eye className="w-4 h-4" />
         <span className="hidden sm:inline">Demo</span>
-      </Link>
-      <Link
-        href="/calculator"
+      </a>
+      <a
+        href={`${REPO}/calculator`}
         className="flex items-center gap-2 px-4 py-2 rounded-lg transition-colors text-muted-foreground hover:text-foreground hover:bg-muted"
       >
         <Calculator className="w-4 h-4" />
         <span className="hidden sm:inline">Calculator</span>
-      </Link>
+      </a>
     </nav>
   );
 }
@@ -47,17 +39,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className="font-sans antialiased">
         <div className="min-h-screen flex flex-col bg-background text-foreground">
           {/* Header */}
           <header className="sticky top-0 z-50 w-full border-b bg-card/80 backdrop-blur-md">
             <div className="container mx-auto px-4 h-16 flex items-center justify-between max-w-6xl">
-              <Link href="/" className="flex items-center gap-2 font-bold text-xl">
+              <a href={`${REPO}/`} className="flex items-center gap-2 font-bold text-xl">
                 <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
                   <Sun className="w-6 h-6 text-white" />
                 </div>
                 <span className="hidden sm:inline">SolarCalc</span>
-              </Link>
+              </a>
               <Navigation />
             </div>
           </header>
