@@ -1,8 +1,6 @@
 import React from 'react';
 import { Sun, Home, Calculator, Eye } from "lucide-react";
-
-// Helper to handle GitHub Pages path
-const REPO = '/solar-pwa';
+import "./globals.css"; 
 
 function Navigation() {
   return (
